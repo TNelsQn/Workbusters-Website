@@ -1,20 +1,22 @@
 
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import HomePage from "./views/HomePage";
+
+// Pages
+//import HomePage from "views/HomePage.js";
 
 function App() {
   return (
     <>
       <Router>
-          <Switch>    
+          <Routes>    
+
             {/* Routes */}
             {/* TODO: could direct unknown URL to PageNotFound page displaying 404 error */}
-
-
-            <Route path="/" exact render={props => <HomePage {...props} />} />
-
-            <Redirect to="/" />
-          </Switch>
+            <Route path="/" element = {<HomePage />} />
+          
+          </Routes>
       </Router>
     </>
   );
