@@ -12,10 +12,11 @@ function App() {
       <Router>
           <Routes>    
 
-            {/* Routes */}
-            {/* TODO: could direct unknown URL to PageNotFound page displaying 404 error */}
-            <Route path="/" element = {<HomePage />} />
-          
+              {/* Routes */}
+              {/* TODO: could direct unknown URL to PageNotFound page displaying 404 error */}
+              <Route path="/" element = {<HomePage />} />
+
+              <Route path="*" element={<Navigate to="not-found"/>} />
           </Routes>
       </Router>
     </>
