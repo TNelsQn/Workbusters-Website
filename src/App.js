@@ -6,7 +6,15 @@ function App() {
   return (
     <>
       <Router>
+          <Switch>    
+            {/* Routes */}
+            {/* TODO: could direct unknown URL to PageNotFound page displaying 404 error */}
 
+
+            <Route path="/" exact render={props => <HomePage {...props} />} />
+
+            <Redirect to="/" />
+          </Switch>
       </Router>
     </>
   );
